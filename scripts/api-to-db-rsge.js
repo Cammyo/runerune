@@ -1,12 +1,15 @@
 var fs = require('fs'),
+    jsonfile = require('jsonfile'),
     request = require('request'),
     mongoose = require('mongoose')
 
 
 const URL_ITEMS = "http://services.runescape.com/m=itemdb_rs/api/catalogue/detail.json?item=";
 
-var itemObjArray = [];
 var counter = 1;
+var file = "ge-data";
+var fileObj = {items:[]}
+
 
 // found this file at http://ix.io/1pk4 could also get with 'rs-items' script from github
 var idArray = fs.readFileSync('rs-items-index.csv', 'utf-8',(err, data)=>{
@@ -38,15 +41,20 @@ function requestItemPrice(id){
         
         if (obj){
           console.log("Got "+obj.item.name+"... Adding to DB. ID was "+obj.item.id)
+          // go through idArray odds for the IDs
           counter+=2;
           
-          
+          // push data i need into my fileObj array
+          fileObj.items.push(
+            {name:obj.item.name,
+            id:obj.item.id,
+            price:obj.item.current.price,
+            icon:obj.item.icon}
+          )
+
           
           setTimeout(requestItemPrice, 4000, idArray[counter]);
           
-//           mongoose -- save as new item in db before calling api again 
-
-          //array of objects
           
           
         } else{
@@ -56,17 +64,26 @@ function requestItemPrice(id){
         
       } catch (e){
         console.log(e+". Too many requests? Waiting a sec...")
-        setTimeout(requestItemPrice, 1000, id)
+        setTimeout(requestItemPrice, 1000, id);
         
       }
-      
-    } 
+    //  write obj to file as it comes in :)
+    jsonfile.writeFile(file, fileObj, function(err){
+      if(err){
+        console.log(err);
+      }
+    });
+    }
   });
 }
 
 requestItemPrice(idArray[counter]);
 
 
+
+          //mongoose -- save as new item in db before calling api again 
+
+          //array of objects
 
 
 
