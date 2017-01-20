@@ -4,14 +4,16 @@
   "description": "",
   "main": "routes.js",
   "dependencies": {
-    "csv-to-array": "^1.0.2",
-    "electron": "^1.4.14",
+    "bcryptjs": "^2.4.0",
+    "body-parser": "^1.16.0",
+    "client-sessions": "^0.7.0",
+    "colors": "^1.1.2",
+    "express": "^4.14.0",
     "jsonfile": "^2.4.0",
     "mongodb": "^2.2.20",
     "mongoose": "^4.7.6",
-    "nightmare": "^2.9.1",
-    "runescape-api": "^1.0.9",
-    "xvfb": "^0.2.3"
+    "morgan": "^1.7.0",
+    "request": "^2.79.0"
   },
   "devDependencies": {},
   "scripts": {

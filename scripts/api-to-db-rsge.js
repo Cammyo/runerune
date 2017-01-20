@@ -7,7 +7,7 @@ var fs = require('fs'),
 const URL_ITEMS = "http://services.runescape.com/m=itemdb_rs/api/catalogue/detail.json?item=";
 
 var counter = 1;
-var file = "ge-data";
+var file = "ge-data" + ".json";
 var fileObj = {items:[]}
 
 
@@ -64,7 +64,7 @@ function requestItemPrice(id){
         
       } catch (e){
         console.log(e+". Too many requests? Waiting a sec...")
-        setTimeout(requestItemPrice, 1000, id);
+        setTimeout(requestItemPrice, 500, id);
         
       }
     //  write obj to file as it comes in :)

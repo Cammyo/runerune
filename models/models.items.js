@@ -1,14 +1,10 @@
 var mongoose = require('mongoose');
 
-// mongoose.connect('mongodb://localhost/########');
-
 var item = mongoose.Schema({
-  name : {type : string},
-  id : {type : number},
-  price : {type : number},
+  name : {type : String},
+  id : {type : Number},
+  price : {type : Number},
+  icon : {type : String}
 });
-
-
-
 
 module.exports = mongoose.model("Item", item);

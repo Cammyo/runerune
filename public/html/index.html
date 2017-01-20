@@ -3,8 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <title>Runerune</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.9/angular.js"></script>
+  
+<!--   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css"> -->
+  <link href="http://www.runescape.com/css/c/fonts-6.css" rel="stylesheet" type="text/css" media="all">
+  <link href="http://www.runescape.com/css/c/components-52.css" rel="stylesheet">
+  <link href="http://www.runescape.com/css/c/pagesal-54.css" rel="stylesheet">
+  <link href="http://www.runescape.com/css/c/pagesmz-54.css" rel="stylesheet">
+  
 </head>
 <body>
+  
+    <header class="header">
+		<div class="header__container">
+			<div class="header-top">
+				<ul class="header-top__right">
+					<li class="header-top__right-option"><span id="playerCount">92,776</span> Players on Runescape</li>
+                    <li class="header-top__right-option"><a class="header-top__right-link" href="https://rschronicle.com/runescape?utm_medium=internal&amp;utm_source=rsmain&amp;utm_campaign=openbeta&amp;utm_content=header-top&amp;utm_term=site-header">Chronicle</a></li>
+					<li class="header-top__right-option"><a class="header-top__right-link" href="http://oldschool.runescape.com/?jptg=ia&amp;jptv=navbar">Old School</a></li>
+					<li class="header-top__right-option"><a class="header-top__right-link" href="https://secure.runescape.com/m=billing_core/paymentoptions.ws?jptg=ia&amp;jptv=navbar">Subscribe</a></li>
+					<li class="header-top__right-option"><a class="header-top__right-link" href="https://www.runescape.com/account_settings.ws?jptg=ia&amp;jptv=navbar">Account</a></li>
+					<li class="header-top__right-option"><a class="header-top__right-link" href="https://support.runescape.com" target="_blank">Support</a></li>
+					<li class="header-top__right-option">
+							<a class="header-top__right-link header-top__right-link--signin" id="header-login" href="https://secure.runescape.com/m=weblogin/loginform.ws?mod=www&amp;ssl=0&amp;dest=community">Sign in / Join</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="header__bg">
+			<div class="header__container">
+				<div class="header-second">
+					<div class="header-table">
+						<a class="header-second__logo" href="http://www.runescape.com/?jptg=ia&amp;jptv=navbar">
+							<img class="header-second__logo-image" src="http://www.runescape.com/img/rs3/global/header_logo.png" title="RuneScape" alt="RuneScape">
+						</a>
+						<nav class="main-nav" id="main-nav">
+							<ul class="main-nav__list">
+								<li class="main-nav__item main-nav__item--group main-nav__item--game">
+									<a href="https://www.runescape.com/game-info" class="main-nav__heading">Calculators<span class="main-nav__expander"></span></a>
+									<ul class="main-nav__group">
+										<li class="main-nav__group-item"><a class="main-nav__group-item-link" href="https://www.runescape.com/game-guide/beginners-guide">Agility Calculator</a></li>
+									</ul>
+								</li>
+								<li class="main-nav__item main-nav__item--news">
+									<a class="main-nav__heading" href="/item-prices">Item Prices</a>
+								</li>
+								<li class="main-nav__item main-nav__item--group main-nav__item--community">
+									<a href="http://www.runescape.com/community" class="main-nav__heading">Community<span class="main-nav__expander"></span></a>
+									<ul class="main-nav__group">
+										<li class="main-nav__group-item"><a class="main-nav__group-item-link" href="http://services.runescape.com/m=hiscore/?jptg=ia&amp;jptv=navbar">HiScores</a></li>
+									</ul>
+								</li>
+								<li class="main-nav__item main-nav__item--forums">
+									<a class="main-nav__heading" href="http://services.runescape.com/m=forum/forums.ws?jptg=ia&amp;jptv=navbar">Forums</a>
+								</li>
+								<li class="main-nav__item main-nav__item--group main-nav__item--shop">
+									<a href="https://www.runescape.com/solomons-store?jptg=ia&amp;jptv=navbar" class="main-nav__heading">Shop<span class="main-nav__expander"></span></a>
+									<ul class="main-nav__group">
+										<li class="main-nav__group-item main-nav__group-item--shop main-nav__group-item--shop-membe"><a class="main-nav__group-item-link" href="http://www.runescape.com/members_benefits?jptg=ia&amp;jptv=navbar">Membership</a></li>
+									</ul>
+								</li>
+								<li class="main-nav__item main-nav__item--account">
+									<a class="main-nav__heading" href="http://oldschool.runescape.com/?jptg=ia&amp;jptv=navbar">Old School</a>
+								</li>
+								<li class="main-nav__item main-nav__item--account">
+									<a class="main-nav__heading" href="https://www.runescape.com/account_settings.ws?jptg=ia&amp;jptv=navbar">Account</a>
+								</li>
+								<li class="main-nav__item main-nav__item--account">
+									<a class="main-nav__heading" href="https://support.runescape.com/hc/en-gb">Support</a>
+								</li>
+								<li class="main-nav__item main-nav__item--account">
+										<a class="main-nav__heading" href="https://secure.runescape.com/m=weblogin/loginform.ws?mod=www&amp;ssl=0&amp;dest=community">Sign in / Join</a>
+								</li>
+								<li class="main-nav__item main-nav__item--play">
+									<a id="play" class="main-nav__heading" href="html/login.html">Sign Up</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
   
 </body>
 </html>

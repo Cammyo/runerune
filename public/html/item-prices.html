@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html ng-app="runeApp" lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Runerune</title>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.9/angular.js"></script>
+  
+<!--   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css"> -->
+  <link href="http://www.runescape.com/css/c/fonts-6.css" rel="stylesheet" type="text/css" media="all">
+  <link href="http://www.runescape.com/css/c/components-52.css" rel="stylesheet">
+  <link href="http://www.runescape.com/css/c/pagesal-54.css" rel="stylesheet">
+  <link href="http://www.runescape.com/css/c/pagesmz-54.css" rel="stylesheet">
+  
+
+  <script src="/js/controllers.item-prices.js"></script>
+</head>
+
+<body ng-controller="ItemPriceController as rune">
+  
+
+  
+  <div class="tiledBlueFrame">
+    <div class="tl corner"></div>
+    <div class="tr corner"></div>
+    <div class="bl corner"></div>
+    <div class="br corner"></div>
+    <div class="tableWrap">
+      <table>
+        <thead>
+          <tr>
+            <th class="col1 align">Icon</th>
+            <th class="col2">Name</th>
+            <th class="col3 align">Price</th>
+            <th class="col4 align">ID</th>
+          </tr>
+        </thead>
+      </table>
+      <table>
+        <tbody>
+          <tr ng-repeat="eachItem in rune.items.data.items">
+            <td class="col1 align">
+              <img src="{{::eachItem.icon}}" alt="">
+            </td>
+            <td class="col2">
+              <p>{{::eachItem.name}}</p>
+            </td>
+            <td class="col3 align">
+              <p>{{::eachItem.price}}</p>
+            </td>
+            <td class="col4 align">
+              <a>#{{::eachItem.id}}</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+</body>
+
+</html>
