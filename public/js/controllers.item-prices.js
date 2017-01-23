@@ -4,8 +4,7 @@ angular.module("runeApp",[])
     var rune = this;
     
     rune.items = runeFactory.factInfo;
-//     console.log(rune.items)
-    
+
   }]);
 
 runeFactory.$inject = ['$http'];
@@ -16,6 +15,8 @@ angular.module("runeApp")
 function runeFactory($http){
   
   var factInfo = {};  
+  
+  
   
   $http.get('/itemdata')
     .then(function(res){

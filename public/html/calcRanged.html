@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html ng-app="agilityModule" lang="en">
+<html ng-app="rangedModule" lang="en">
 
 <head>
 	<meta charset="UTF-8">
-	<title>Runerune: Agility</title>
+	<title>Runerune: Ranged</title>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.9/angular.js"></script>
 
@@ -19,10 +19,10 @@
 
 	<link rel="stylesheet" href="/css/styles.css">
 
-	<script src="/js/controllers.agilityCalc.js"></script>
+	<script src="/js/controllers.rangedCalc.js"></script>
 </head>
 
-<body ng-controller="agilityController as agil">
+<body ng-controller="rangedController as range">
 	<div class="stickyWrap">
 		<header class="header">
 			<div class="header__container">
@@ -91,10 +91,10 @@
 				<ul class="breadcrumb" itemprop="breadcrumb">
 					<li><a href="/">Home</a></li>
 					<li><a href="/calculators">Calculators</a></li>
-					<li>Agility</li>
+					<li>Ranged</li>
 				</ul>
 				<div class="content roughTop"><br><br>	
-					<h2>Agility Calculator</h2>
+					<h2>Ranged Calculator</h2>
 					<div class="tiledBlueFrame">
 						<div class="tl corner"></div>
 						<div class="tr corner"></div>
@@ -103,7 +103,7 @@
 							<table style="width:100%;">
 								<thead>
 									<tr>
-										<th class="priceCol">Number</th>
+										<th class="priceCol">Kills</th>
 										<th class="itemCol">Name</th>
 										<th class="priceCol">Level</th>
 										<th class="priceCol">Exp</th>
@@ -112,18 +112,18 @@
 							</table>
 							<table style="width:100%;">
 								<tbody>
-									<tr ng-repeat="eachCourse in agil.agilityCourses">
+									<tr ng-repeat="eachMonster in range.rangedMonsters">
 										<td class="col1 align">
-											<p>{{eachCourse[0]}}</p>
+											<p>{{eachMonster[0]}}</p>
 										</td>
 										<td class="col2">
-											<p>{{::eachCourse[1]}}</p>
+											<p>{{::eachMonster[1]}}</p>
 										</td>
 										<td class="col3 align">
-											<p>{{::eachCourse[2]}}</p>
+											<p>{{::eachMonster[2]}}</p>
 										</td>
 										<td class="col4 align">
-											<a>{{::eachCourse[3]}}</a>
+											<a>{{::eachMonster[3]}}</a>
 										</td>
 									</tr>
 								</tbody>
@@ -134,18 +134,18 @@
 					<section class="input">
 						<h3>Current Experience:</h3>
 						<form action="ranking" class="index">
-							<input ng-model="agil.currentExp" type="text" placeholder="Current Experience" class="placeholder text" title="Item Name">
+							<input ng-model="range.currentExp" type="text" placeholder="Current Experience" class="placeholder text" title="Item Name">
 						</form>
 					</section>
 					<section class="input">
 						<h3>Desired Level:</h3>
 						<form action="ranking" class="index">
-							<input ng-model="agil.desiredLevel" type="text" placeholder="Desired Level" class="placeholder text" title="Item Name">
+							<input ng-model="range.desiredLevel" type="text" placeholder="Desired Level" class="placeholder text" title="Item Name">
 						</form>
 						<div class="btnWrap ">
 							<div class="btn">
 								<div class="btnRight">
-									<input ng-click="agil.countCourses(agil.currentExp, agil.desiredLevel)"type="submit" value="Go" name="">
+									<input ng-click="range.countMonsters(range.currentExp, range.desiredLevel)"type="submit" value="Go" name="">
 								</div>
 							</div>
 						</div>

@@ -1,9 +1,7 @@
 angular.module("agilityModule",[])
   .controller("agilityController", agilityCtrl)
 
-agilityCtrl.$inject = ['$scope']
-
-function agilityCtrl($scope){
+function agilityCtrl(){
   var agil = this;
   
   agil.levelExp = [
@@ -26,7 +24,7 @@ function agilityCtrl($scope){
     38737661,42769801,47221641,52136869,57563718,
     63555443,70170840,77474828,85539082,84442737,
     104273167,115126838,127110260,140341028,154848977,
-    171077457,188884740
+    171077457,188884740,200000000
   ];
   
   agil.gnome = 1;
@@ -73,7 +71,8 @@ function agilityCtrl($scope){
        agil.advancedGnome = Math.ceil((agil.levelExp[agil.desiredLevel] - agil.currentExp)/agil.agilityCourses[10][3]) || 1;
        agil.advancedBarbarian = Math.ceil((agil.levelExp[agil.desiredLevel] - agil.currentExp)/agil.agilityCourses[11][3]) || 1;
     }
-      agil.agilityCourses = [
+    
+    agil.agilityCourses = [
       [agil.gnome,"Gnome Course",1,86.5],
       [agil.penguin,"Penguin Course",30,765],
       [agil.pyramid,"Agility Pyramid",30,1622],
@@ -88,11 +87,4 @@ function agilityCtrl($scope){
       [agil.advancedBarbarian,"Advanced Barbarian Course",90,751.7],
     ];
   };
-  
-
-  
-  
 }
-
-
-

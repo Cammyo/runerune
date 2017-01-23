@@ -16,8 +16,13 @@ div.contents{
   margin-top:0px;
 }
 
-.announce-box{
-  display:table-cell;background:transparent url('http://www.runescape.com/img/rs3/background-tab-top.jpg') no-repeat 0 0;width:660px;z-index:2;vertical-align:top;box-shadow:10px 0px 8px #000;overflow:visible;position:static;
-  height:1200px;
-  margin-top:200px;
+footer{
+  bottom:0;
+  position:fixed;
 }
+
+.calc-btn{
+  font-size:2.5em;
+  display:inline-block;
+}
+

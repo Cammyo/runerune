@@ -32,6 +32,26 @@ module.exports = (app) => {
     res.sendFile('calcPrayer.html', {root : './public/html'});
   })
   
+  app.get('/calculators/ranged', (req, res)=>{
+    res.sendFile('calcRanged.html', {root : './public/html'});
+  })
+  
+  app.get('/calculators/attack', (req, res)=>{
+    res.sendFile('calcAttack.html', {root : './public/html'});
+  })
+  
+  app.get('/calculators/strength', (req, res)=>{
+    res.sendFile('calcStrength.html', {root : './public/html'});
+  })
+  
+  app.get('/calculators/magic', (req, res)=>{
+    res.sendFile('calcMagic.html', {root : './public/html'});
+  })
+  
+  app.get('/calculators/defence', (req, res)=>{
+    res.sendFile('calcDefence.html', {root : './public/html'});
+  })
+  
   app.get('/logout', Auth.logout);        // logout route + redirect
 
   app.post('/login', Auth.login);         // login form submission

@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Runerune</title>
+  <title>Item Prices</title>
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.9/angular.js"></script>
   
@@ -98,7 +98,7 @@
             </table>
             <table style="width:100%;">
               <tbody>
-                <tr ng-repeat="eachItem in rune.items.data.items">
+                <tr ng-repeat="eachItem in rune.items.data.items | filter:rune.search">
                   <td class="col1 align">
                     <img src="{{::eachItem.icon}}" alt="">
                   </td>
@@ -116,22 +116,15 @@
             </table>
           </div>
         </div>
-      </div>
         <aside role="complementary" class="sidebar">
           <section class="input">
             <h3>Search For An Item</h3>
             <form action="ranking" class="index">
-              <input type="text" placeholder="Item Name" class="placeholder text" title="Item Name">
-                <div class="btnWrap">
-                  <div class="btn">
-                    <div class="btnRight">
-                      <input type="submit" value="Go" name="">
-                    </div>
-                </div>
-              </div>
+              <input ng-model="rune.search" type="text" placeholder="Item Name" class="placeholder text" title="Item Name">
             </form>
           </section>
         </aside>
+      </div>
     </main>
   </div>
 </div>
