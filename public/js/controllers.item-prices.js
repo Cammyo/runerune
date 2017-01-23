@@ -4,7 +4,7 @@ angular.module("runeApp",[])
     var rune = this;
     
     rune.items = runeFactory.factInfo;
-    console.log(rune.items)
+//     console.log(rune.items)
     
   }]);
 

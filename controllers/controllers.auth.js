@@ -14,7 +14,7 @@ var User = require('../models/models.users'),
 module.exports = {
     logout: (req, res) => {
         req.session.reset(); // clears the users cookie session
-        res.redirect('/login.html');
+        res.redirect('/signin.html');
     },
     login: (req, res) => {
         console.info('auth.login.payload:', req.body);
@@ -65,7 +65,7 @@ module.exports = {
             next();
         } else {
             console.warn('User is not logged in!'.yellow)
-            res.redirect('/login.html');
+            res.redirect('/signin.html');
         }
     }
 }

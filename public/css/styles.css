@@ -1,0 +1,23 @@
+.cntr{
+  text-align:center;
+}
+
+.skillicon{
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.main{
+  margin-top:30px;
+}
+
+div.contents{
+  margin-top:0px;
+}
+
+.announce-box{
+  display:table-cell;background:transparent url('http://www.runescape.com/img/rs3/background-tab-top.jpg') no-repeat 0 0;width:660px;z-index:2;vertical-align:top;box-shadow:10px 0px 8px #000;overflow:visible;position:static;
+  height:1200px;
+  margin-top:200px;
+}
