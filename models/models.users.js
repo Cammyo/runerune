@@ -1,7 +1,7 @@
 const SALTY_BITS = 7;
 
 var mongoose = require('mongoose'),
-    bcrypt = require('bcrypt'),
+    bcrypt = require('bcryptjs'),
     UserSchema = new mongoose.Schema({
       toonName: String,
       email : {
