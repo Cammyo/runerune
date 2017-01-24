@@ -38,7 +38,7 @@ app.use(
 
 Routes(app);
 
-app.listen(80, (err) => {
+app.listen(1337 || PORT, (err) => {
     if( err ) {
         console.error('#ERROR#'.red,'Could not start server! :(');
     } else {

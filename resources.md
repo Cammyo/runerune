@@ -17,15 +17,16 @@ i think i want a navbar on top, no sidebar. use classic runescape 2 website back
 calculators:
 i want grand exchange prices for all bones for prayer at least, maybe other stuffs has GE
 agility,fletching,firemaking,woodcutting,mining,crafting?,herblore?,fishing,cooking,thieving?,runecrafting?,hunter,slayer,summoning?,construction?,farming,smithing?,divination?,invention?
-fuck dungeoneering - get the easy skill calcs out so you have versatility
+no dungeoneering - get the easy skill calcs out so you have versatility
 combat most likely easy, minus constitution
 1-99 goblins lol
 
 27 skills in runescape, 10 are easy, + combat
 
-perhaps a quest exp calculator for pure building?
+perhaps a quest exp calculator for pure building? <-- cool idea for later
 
-bestiary look up 
+bestiary look up?
+hiscores look up?
 
 easy:
 agility
@@ -40,7 +41,9 @@ farming
 
 add current level to calculators when you put in your exp
 runescape api for current exp lookup from having an account and add it to the db from account page
-make route to get this object and then you can $http 
+make route to get this object and then you can $http or something
+
+
 
 
 one click apps - email - ssh root@IP - y
