@@ -21,6 +21,22 @@ footer{
   position:fixed;
 }
 
+.main-nav__item--game{
+  width:21%;
+}
+
+.main-nav__item--shop{
+  width:21%;
+}
+
+.main-nav__item--news{
+  width:11%;
+}
+
+.main-nav__item--community{
+  width:11%;
+}
+
 .calc-btn{
   font-size:2.5em;
   display:inline-block;

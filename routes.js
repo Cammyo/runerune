@@ -60,6 +60,8 @@ module.exports = (app) => {
   app.get('/', Auth.session);
   app.use(express.static('public'));
   
+  
+  
   app.get('/itemdata', (req, res) => {
     Item.findOne({}, (err, items)=>{
       res.send(items);

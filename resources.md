@@ -37,3 +37,14 @@ fishing
 cooking
 hunter
 farming
+
+add current level to calculators when you put in your exp
+runescape api for current exp lookup from having an account and add it to the db from account page
+make route to get this object and then you can $http 
+
+
+one click apps - email - ssh root@IP - y
+give it a pass
+scp server.js
+forever logs server.js for logs and errors!
+git clone into /opt and run sudo forever server.js !
