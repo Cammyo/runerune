@@ -12,7 +12,7 @@ var express = require('express'),
     }),
     sessions = require('client-sessions')({
         cookieName: '_RRAC',
-        secret: 'S3NDNUD35',
+        secret: '5UP3R53C3T',
         requestKey: 'session',
         duration: (86400 * 1000) * 30,
         cookie: {
@@ -38,7 +38,7 @@ app.use(
 
 Routes(app);
 
-app.listen(PORT, (err) => {
+app.listen(80, (err) => {
     if( err ) {
         console.error('#ERROR#'.red,'Could not start server! :(');
     } else {
