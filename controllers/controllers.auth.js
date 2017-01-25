@@ -14,7 +14,7 @@ var User = require('../models/models.users'),
 module.exports = {
     logout: (req, res) => {
         req.session.reset(); // clears the users cookie session
-        res.redirect('/signin.html');
+        res.redirect('/html/signin.html');
     },
     login: (req, res) => {
         console.info('auth.login.payload:', req.body);

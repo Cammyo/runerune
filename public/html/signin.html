@@ -10,94 +10,73 @@
   <link href="http://www.runescape.com/css/c/components-52.css" rel="stylesheet">
   <link href="http://www.runescape.com/css/c/pagesal-54.css" rel="stylesheet">
   <link href="http://www.runescape.com/css/c/pagesmz-54.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://www.runescape.com/css/c/responsive/vendor-5.css">
+	<link rel="stylesheet" href="https://www.runescape.com/css/c/responsive/modules-25.css">
   
   <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
   
   <script src="/js/module.auth.js"></script>
 </head>
 <body ng-controller ="module.auth.controller as auth">
-  
-    <header class="header">
-			<div class="header__container">
-				<div class="header-top cntr">
-					<ul class="header-top__right">
-						<li class="header-top__right-option"><a class="header-top__right-link" href="/">Home</a></li>
-						<li class="header-top__right-option"><a class="header-top__right-link" href="https://www.linkedin.com/in/cameron-makowski-8baa43131">Contact</a></li>
-						<li class="header-top__right-option">
-								<a class="header-top__right-link header-top__right-link--signin" id="header-login" href="/signin">Sign in / Join</a>
-						</li>
-					</ul>
+  <div class="stickyWrap">
+	
+		<div style="display:inline-block;margin-left:20%;margin-top:50px;" class="l-vista__container " id="l-vista__container">
+			<div class="l-vista__logo">
+				<div class="a-logo">
+					<a href="/" id="rs-logo-home">
+						<img class="a-logo__img" src="/img/runeruneHeader.png" alt="RuneScape Logo" title="RuneScape">
+					</a>
 				</div>
 			</div>
-			<div class="header__bg">
-				<div class="header__container">
-					<div class="header-second">
-						<div class="header-table">
-							<a class="header-second__logo" href="/">
-								<img class="header-second__logo-image" src="/img/runeruneHeader.png" title="RuneRune" alt="RuneRune">
-							</a>
-							<nav class="main-nav" id="main-nav">
-								<ul class="main-nav__list">
-									<li class="main-nav__item main-nav__item--group main-nav__item--game">
-										<a href="/calculators" class="main-nav__heading">Calculators<span class="main-nav__expander"></span></a>
-										<ul class="main-nav__group">
-											<li class="main-nav__group-item"> <div ><img class="skillicon float-right" src="/img/skill-icons/Agility.png" alt=""><a class="main-nav__group-item-link" href="/calculators/agility">Agility Calculator</a></div> </li>
-											<li class="main-nav__group-item"> <div ><img class="skillicon float-right" src="/img/skill-icons/Prayer.png" alt=""><a class="main-nav__group-item-link" href="/calculators/prayer">Prayer Calculator</a></div> </li>
-											<li class="main-nav__group-item"> <div ><img class="skillicon float-right" src="/img/skill-icons/Ranged.png" alt=""><a class="main-nav__group-item-link" href="/calculators/ranged">Ranged Calculator</a></div> </li>
-											<li class="main-nav__group-item"> <div ><img class="skillicon float-right" src="/img/skill-icons/Attack.png" alt=""><a class="main-nav__group-item-link" href="/calculators/attack">Attack Calculator</a></div> </li>
-											<li class="main-nav__group-item"> <div ><img class="skillicon float-right" src="/img/skill-icons/Strength.png" alt=""><a class="main-nav__group-item-link" href="/calculators/strength">Strength Calculator</a></div> </li>
-											<li class="main-nav__group-item"> <div ><img class="skillicon float-right" src="/img/skill-icons/Magic.png" alt=""><a class="main-nav__group-item-link" href="/calculators/magic">Magic Calculator</a></div> </li>
-											<li class="main-nav__group-item"> <div ><img class="skillicon float-right" src="/img/skill-icons/Defence.png" alt=""><a class="main-nav__group-item-link" href="/calculators/defence">Defence Calculator</a></div> </li>
-										</ul>
-									</li>
-									<li class="main-nav__item main-nav__item--news">
-										<a class="main-nav__heading" href="/item-prices"></a>
-									</li>
-									<li class="main-nav__item main-nav__item--forums">
-										<a class="main-nav__heading" href="/item-prices">Item Prices</a>
-									</li>
-									<li class="main-nav__item main-nav__item--group main-nav__item--community">
-										<a class="main-nav__heading"><span></span></a>
-									</li>
-									<li class="main-nav__item main-nav__item--group main-nav__item--shop">
-										<a href="/account" class="main-nav__heading cntr nopad">Account</a>
-									</li>
-									<li class="main-nav__item main-nav__item--play">
-										<a id="play" class="main-nav__heading" href="/signin">Sign Up</a>
-									</li>
-								</ul>
-							</nav>
-						</div>
-					</div>
-				</div>
-			</div>
-		</header>
-        <form ng-submit="auth.login.submit($event)">
-            <h1>Login!</h1>
-            <fieldset>
-                <label>Email</label>
-                <input required placeholder="Email" type="email" ng-model="auth.payloads.login.email"/>
-            </fieldset>
-            <fieldset>
-                <label for="password">Password</label>
-                <input required placeholder="Password" type="password" ng-model="auth.payloads.login.password"/>
-            </fieldset>
-            <button type="submit">Login</button>
-            <p ng-class="auth.login.alert">{{ auth.login.message }}</p>
-        </form>
-        <form ng-submit="auth.register.submit($event)">
-            <h1>Register!</h1>
-            <fieldset>
-                <label>Email</label>
-                <input required placeholder="Email" type="text" ng-model="auth.payloads.register.email"/>
-            </fieldset>
-            <fieldset>
-                <label for="password">Password</label>
-                <input required placeholder="Create a password" type="password" ng-model="auth.payloads.register.password"/>
-            </fieldset>
-            <button type="submit">Register</button>
-            <p ng-class="auth.register.alert">{{ auth.register.message }}</p>
-        </form>
+			<form class="login-form" id="login-form" ng-submit="auth.login.submit($event)">
+				<h1 style="text-align:center;">Login!</h1>
+				<label class="login-form__label">Email:
+												<input class="login-form__text" type="text" name="username" id="login-username" maxlength="200" title="Enter your Email:" required="" placeholder="Email" type="email" ng-model="auth.payloads.login.email">
+												<span class="form-error">
+														This field is required.
+												</span>
+										</label>
+				<label style="margin-top:6px;" class="login-form__label">Password:
+												<input class="login-form__text" type="password" name="password" id="login-password" maxlength="20" title="Enter your password:" required="" placeholder="Password" type="password" ng-model="auth.payloads.login.password">
+												<span class="form-error">
+														This field is required.
+												</span>
+										</label><br><br><br><br><br>
+				<button class="a-button a-button--size-full" id="rs-login-submit" type="submit">Log In</button>
+				<p ng-class="auth.login.alert">{{ auth.login.message }}</p>
+			</form>
 
+		</div>
+		<div style="display:inline-block;margin-left:20%;margin-top:50px;" class="l-vista__container " id="l-vista__container">
+			<div class="l-vista__logo">
+				<div class="a-logo">
+					<a href="/" id="rs-logo-home">
+						<img class="a-logo__img" src="/img/runeruneHeader.png" alt="RuneScape Logo" title="RuneScape">
+					</a>
+				</div>
+			</div>
+			<form class="login-form" id="login-form"  ng-submit="auth.register.submit($event)">
+				<h1 style="text-align:center;">Register!</h1>
+				<label class="login-form__label">Email:
+												<input class="login-form__text" type="text" name="username" id="login-username" maxlength="200" title="Enter your Email:"  required="" placeholder="Email" type="text" ng-model="auth.payloads.register.email">
+												<span class="form-error">
+														This field is required.
+												</span>
+										</label>
+				<label class="login-form__label">Password:
+												<input class="login-form__text" type="password" name="password" id="login-password" maxlength="20" title="Enter your password:" required placeholder="Create a password" type="password" ng-model="auth.payloads.register.password">
+												<span class="form-error">
+														This field is required.
+												</span>
+										</label>
+							<label class="login-form__label">Character Name:
+												<input class="login-form__text" type="text" name="password" id="login-password" maxlength="20" title="Enter your Runescape Username:" placeholder="Your Runescape Username" type="text" ng-model="auth.payloads.register.toonName">
+										</label>
+				<button class="a-button a-button--size-full" id="rs-login-submit" type="submit">Register</button>
+				<p ng-class="auth.register.alert">{{ auth.register.message }}</p>
+			</form>
+
+		</div>
+	</div>
 </body>
 </html>

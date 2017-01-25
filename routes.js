@@ -1,7 +1,9 @@
 var Auth = require('./controllers/controllers.auth.js'),
     Item = require('./models/models.items.js'),
     express = require('express'),
-    middleware = require('./middleware');
+    middleware = require('./middleware'),
+    User = require('./models/models.users');
+
 
 module.exports = (app) => {
   app.get('/', (req, res)=>{
@@ -56,7 +58,13 @@ module.exports = (app) => {
 
   app.post('/login', Auth.login);         // login form submission
   app.post('/register', Auth.register);   // register form submission
-
+  
+  app.get('/api/me',(req, res)=>{
+    User.findOne({_id : req.session.uid}, (err, user) =>{
+      res.send(user) // send down their object
+    })
+  })
+  
   app.get('/', Auth.session);
   app.use(express.static('public'));
   

@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Account</title>
-  
-  <link href="http://www.runescape.com/css/c/fonts-6.css" rel="stylesheet" type="text/css" media="all">
-	
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.9/angular.js"></script>
-  
+	<meta charset="UTF-8">
+	<title>Account</title>
+
+	<link href="http://www.runescape.com/css/c/fonts-6.css" rel="stylesheet" type="text/css" media="all">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.9/angular.js"></script>
+
 	<link href="https://www.runescape.com/css/c/components-53.css" rel="stylesheet">
 	<link href="https://www.runescape.com/css/c/pagesal-56.css" rel="stylesheet">
 	<link href="https://www.runescape.com/css/c/pagesmz-56.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://www.runescape.com/css/rs3/styleguide-9.css">
-  <link href="http://www.runescape.com/css/c/components-52.css" rel="stylesheet">
-  <link href="http://www.runescape.com/css/c/pagesal-54.css" rel="stylesheet">
-  <link href="http://www.runescape.com/css/c/pagesmz-54.css" rel="stylesheet">
+	<link href="http://www.runescape.com/css/c/components-52.css" rel="stylesheet">
+	<link href="http://www.runescape.com/css/c/pagesal-54.css" rel="stylesheet">
+	<link href="http://www.runescape.com/css/c/pagesmz-54.css" rel="stylesheet">
+
+	<script src="/js/controllers.account.js"></script>
 
 	<link rel="stylesheet" href="/css/styles.css">
 	<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
 </head>
+
 <body>
-  <div class="stickyWrap">
-    <header class="header">
+	<div class="stickyWrap">
+		<header class="header">
 			<div class="header__container">
 				<div class="header-top cntr">
 					<ul class="header-top__right">
 						<li class="header-top__right-option"><a class="header-top__right-link" href="/">Home</a></li>
 						<li class="header-top__right-option"><a class="header-top__right-link" href="https://www.linkedin.com/in/cameron-makowski-8baa43131">Contact</a></li>
 						<li class="header-top__right-option">
-								<a class="header-top__right-link header-top__right-link--signin" id="header-login" href="/signin">Sign in / Join</a>
+							<a class="header-top__right-link header-top__right-link--signin" id="header-login" href="/signin">Sign in / Join</a>
 						</li>
 					</ul>
 				</div>
@@ -45,13 +49,27 @@
 									<li class="main-nav__item main-nav__item--group main-nav__item--game">
 										<a href="/calculators" class="main-nav__heading">Calculators<span class="main-nav__expander"></span></a>
 										<ul class="main-nav__group">
-											<li class="main-nav__group-item"> <div ><img class="skillicon float-right" src="/img/skill-icons/Agility.png" alt=""><a class="main-nav__group-item-link" href="/calculators/agility">Agility Calculator</a></div> </li>
-											<li class="main-nav__group-item"> <div ><img class="skillicon float-right" src="/img/skill-icons/Prayer.png" alt=""><a class="main-nav__group-item-link" href="/calculators/prayer">Prayer Calculator</a></div> </li>
-											<li class="main-nav__group-item"> <div ><img class="skillicon float-right" src="/img/skill-icons/Ranged.png" alt=""><a class="main-nav__group-item-link" href="/calculators/ranged">Ranged Calculator</a></div> </li>
-											<li class="main-nav__group-item"> <div ><img class="skillicon float-right" src="/img/skill-icons/Attack.png" alt=""><a class="main-nav__group-item-link" href="/calculators/attack">Attack Calculator</a></div> </li>
-											<li class="main-nav__group-item"> <div ><img class="skillicon float-right" src="/img/skill-icons/Strength.png" alt=""><a class="main-nav__group-item-link" href="/calculators/strength">Strength Calculator</a></div> </li>
-											<li class="main-nav__group-item"> <div ><img class="skillicon float-right" src="/img/skill-icons/Magic.png" alt=""><a class="main-nav__group-item-link" href="/calculators/magic">Magic Calculator</a></div> </li>
-											<li class="main-nav__group-item"> <div ><img class="skillicon float-right" src="/img/skill-icons/Defence.png" alt=""><a class="main-nav__group-item-link" href="/calculators/defence">Defence Calculator</a></div> </li>
+											<li class="main-nav__group-item">
+												<div><img class="skillicon float-right" src="/img/skill-icons/Agility.png" alt=""><a class="main-nav__group-item-link" href="/calculators/agility">Agility Calculator</a></div>
+											</li>
+											<li class="main-nav__group-item">
+												<div><img class="skillicon float-right" src="/img/skill-icons/Prayer.png" alt=""><a class="main-nav__group-item-link" href="/calculators/prayer">Prayer Calculator</a></div>
+											</li>
+											<li class="main-nav__group-item">
+												<div><img class="skillicon float-right" src="/img/skill-icons/Ranged.png" alt=""><a class="main-nav__group-item-link" href="/calculators/ranged">Ranged Calculator</a></div>
+											</li>
+											<li class="main-nav__group-item">
+												<div><img class="skillicon float-right" src="/img/skill-icons/Attack.png" alt=""><a class="main-nav__group-item-link" href="/calculators/attack">Attack Calculator</a></div>
+											</li>
+											<li class="main-nav__group-item">
+												<div><img class="skillicon float-right" src="/img/skill-icons/Strength.png" alt=""><a class="main-nav__group-item-link" href="/calculators/strength">Strength Calculator</a></div>
+											</li>
+											<li class="main-nav__group-item">
+												<div><img class="skillicon float-right" src="/img/skill-icons/Magic.png" alt=""><a class="main-nav__group-item-link" href="/calculators/magic">Magic Calculator</a></div>
+											</li>
+											<li class="main-nav__group-item">
+												<div><img class="skillicon float-right" src="/img/skill-icons/Defence.png" alt=""><a class="main-nav__group-item-link" href="/calculators/defence">Defence Calculator</a></div>
+											</li>
 										</ul>
 									</li>
 									<li class="main-nav__item main-nav__item--news">
@@ -76,27 +94,275 @@
 				</div>
 			</div>
 		</header>
-    
-    <main class="main">
-      <div class="contents">
+
+		<main class="main">
+			<div class="contents">
 				<h1 class="title "><span></span></h1>
 				<ul class="breadcrumb" itemprop="breadcrumb">
 					<li><a href="/">Home</a></li>
 					<li>Account</li>
 				</ul>
 				<div class="contents">
-          <div class="container-divider"></div>
-          <section class="styleguide-defaults">
-            <div class="info-template-overview__copy">
-              <h3 class="double-title" style="font-size: 3em;"><span>Your</span>Account</h3>
-            </div>
-							<label for="Character">Character Name:</label>
-							<input type="text" placholder="Character Name">
-          </section>
-        </div>
-      </div>
-    </main>
-    
+					<div class="container-divider"></div>
+					<section class="styleguide-defaults">
+						<div class="info-template-overview__copy">
+							<h3 class="double-title" style="font-size: 3em;"><span>Your</span>Account</h3>
+						</div>
+						<label style="margin-left:10px;" for="Character">Character Name:
+							<p style="margin-left:50px;">Zezima</p>
+						</label>
+						<section class="playerStats">
+
+							<div class="tiledBlueFrame">
+								<div class="tl corner"></div>
+								<div class="tr corner"></div>
+								<div class="bl corner"></div>
+								<div class="br corner"></div>
+								<div>
+									<table class="headerBgLeft">
+										<thead>
+											<tr>
+												<th class="alignleft">Rank</th>
+												<th class="alignleft">Total XP</th>
+												<th class="alignleft">Level</th>
+												<th class="alignleft">Skill</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=0&amp;page=1">63</a></td>
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=0&amp;page=1">5,400,000,000</a></td>
+												<td class="playerWinLeft alignleft">
+													<div class="relative"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=0&amp;page=1">2,715</a></div>
+												</td>
+												<td>Overall</td>
+											</tr>
+											<tr class="oddRow">
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=1&amp;page=1">554</a></td>
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=1&amp;page=1">200,000,000</a></td>
+												<td class="playerWinLeft alignleft">
+													<div class="relative"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=1&amp;page=1">99</a></div>
+												</td>
+												<td>Attack</td>
+											</tr>
+											<tr>
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=2&amp;page=1">1,083</a></td>
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=2&amp;page=1">200,000,000</a></td>
+												<td class="playerWinLeft alignleft">
+													<div class="relative"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=2&amp;page=1">99</a></div>
+												</td>
+												<td>Defence</td>
+											</tr>
+											<tr class="oddRow">
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=3&amp;page=1">568</a></td>
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=3&amp;page=1">200,000,000</a></td>
+												<td class="playerWinLeft alignleft">
+													<div class="relative"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=3&amp;page=1">99</a></div>
+												</td>
+												<td>Strength</td>
+											</tr>
+											<tr>
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=4&amp;page=1">488</a></td>
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=4&amp;page=1">200,000,000</a></td>
+												<td class="playerWinLeft alignleft">
+													<div class="relative"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=4&amp;page=1">99</a></div>
+												</td>
+												<td>Constitution</td>
+											</tr>
+											<tr class="oddRow">
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=5&amp;page=1">815</a></td>
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=5&amp;page=1">200,000,000</a></td>
+												<td class="playerWinLeft alignleft">
+													<div class="relative"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=5&amp;page=1">99</a></div>
+												</td>
+												<td>Ranged</td>
+											</tr>
+											<tr>
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=6&amp;page=1">295</a></td>
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=6&amp;page=1">200,000,000</a></td>
+												<td class="playerWinLeft alignleft">
+													<div class="relative"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=6&amp;page=1">99</a></div>
+												</td>
+												<td>Prayer</td>
+											</tr>
+											<tr class="oddRow">
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=7&amp;page=1">733</a></td>
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=7&amp;page=1">200,000,000</a></td>
+												<td class="playerWinLeft alignleft">
+													<div class="relative"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=7&amp;page=1">99</a></div>
+												</td>
+												<td>Magic</td>
+											</tr>
+											<tr>
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=8&amp;page=1">2</a></td>
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=8&amp;page=1">200,000,000</a></td>
+												<td class="playerWinLeft alignleft">
+													<div class="relative"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=8&amp;page=1">99</a></div>
+												</td>
+												<td>Cooking</td>
+											</tr>
+											<tr class="oddRow">
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=9&amp;page=1">245</a></td>
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=9&amp;page=1">200,000,000</a></td>
+												<td class="playerWinLeft alignleft">
+													<div class="relative"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=9&amp;page=1">99</a></div>
+												</td>
+												<td>Woodcutting</td>
+											</tr>
+											<tr>
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=10&amp;page=1">100</a></td>
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=10&amp;page=1">200,000,000</a></td>
+												<td class="playerWinLeft alignleft">
+													<div class="relative"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=10&amp;page=1">99</a></div>
+												</td>
+												<td>Fletching</td>
+											</tr>
+											<tr class="oddRow">
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=11&amp;page=1">548</a></td>
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=11&amp;page=1">200,000,000</a></td>
+												<td class="playerWinLeft alignleft">
+													<div class="relative"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=11&amp;page=1">99</a></div>
+												</td>
+												<td>Fishing</td>
+											</tr>
+											<tr>
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=12&amp;page=1">306</a></td>
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=12&amp;page=1">200,000,000</a></td>
+												<td class="playerWinLeft alignleft">
+													<div class="relative"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=12&amp;page=1">99</a></div>
+												</td>
+												<td>Firemaking</td>
+											</tr>
+											<tr class="oddRow">
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=13&amp;page=1">255</a></td>
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=13&amp;page=1">200,000,000</a></td>
+												<td class="playerWinLeft alignleft">
+													<div class="relative"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=13&amp;page=1">99</a></div>
+												</td>
+												<td>Crafting</td>
+											</tr>
+											<tr>
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=14&amp;page=1">305</a></td>
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=14&amp;page=1">200,000,000</a></td>
+												<td class="playerWinLeft alignleft">
+													<div class="relative"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=14&amp;page=1">99</a></div>
+												</td>
+												<td>Smithing</td>
+											</tr>
+											<tr class="oddRow">
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=15&amp;page=1">508</a></td>
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=15&amp;page=1">200,000,000</a></td>
+												<td class="playerWinLeft alignleft">
+													<div class="relative"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=15&amp;page=1">99</a></div>
+												</td>
+												<td>Mining</td>
+											</tr>
+											<tr>
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=16&amp;page=1">425</a></td>
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=16&amp;page=1">200,000,000</a></td>
+												<td class="playerWinLeft alignleft">
+													<div class="relative"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=16&amp;page=1">99</a></div>
+												</td>
+												<td>Herblore</td>
+											</tr>
+											<tr class="oddRow">
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=17&amp;page=1">157</a></td>
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=17&amp;page=1">200,000,000</a></td>
+												<td class="playerWinLeft alignleft">
+													<div class="relative"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=17&amp;page=1">99</a></div>
+												</td>
+												<td>Agility</td>
+											</tr>
+											<tr>
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=18&amp;page=1">4</a></td>
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=18&amp;page=1">200,000,000</a></td>
+												<td class="playerWinLeft alignleft">
+													<div class="relative"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=18&amp;page=1">99</a></div>
+												</td>
+												<td>Thieving</td>
+											</tr>
+											<tr class="oddRow">
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=19&amp;page=1">480</a></td>
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=19&amp;page=1">200,000,000</a></td>
+												<td class="playerWinLeft alignleft">
+													<div class="relative"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=19&amp;page=1">99</a></div>
+												</td>
+												<td>Slayer</td>
+											</tr>
+											<tr>
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=20&amp;page=1">424</a></td>
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=20&amp;page=1">200,000,000</a></td>
+												<td class="playerWinLeft alignleft">
+													<div class="relative"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=20&amp;page=1">99</a></div>
+												</td>
+												<td>Farming</td>
+											</tr>
+											<tr class="oddRow">
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=21&amp;page=1">217</a></td>
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=21&amp;page=1">200,000,000</a></td>
+												<td class="playerWinLeft alignleft">
+													<div class="relative"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=21&amp;page=1">99</a></div>
+												</td>
+												<td>Runecrafting</td>
+											</tr>
+											<tr>
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=22&amp;page=1">245</a></td>
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=22&amp;page=1">200,000,000</a></td>
+												<td class="playerWinLeft alignleft">
+													<div class="relative"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=22&amp;page=1">99</a></div>
+												</td>
+												<td>Hunter</td>
+											</tr>
+											<tr class="oddRow">
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=23&amp;page=1">219</a></td>
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=23&amp;page=1">200,000,000</a></td>
+												<td class="playerWinLeft alignleft">
+													<div class="relative"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=23&amp;page=1">99</a></div>
+												</td>
+												<td>Construction</td>
+											</tr>
+											<tr>
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=24&amp;page=1">216</a></td>
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=24&amp;page=1">200,000,000</a></td>
+												<td class="playerWinLeft alignleft">
+													<div class="relative"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=24&amp;page=1">99</a></div>
+												</td>
+												<td>Summoning</td>
+											</tr>
+											<tr class="oddRow">
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=25&amp;page=1">766</a></td>
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=25&amp;page=1">200,000,000</a></td>
+												<td class="playerWinLeft alignleft">
+													<div class="relative"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=25&amp;page=1">120</a></div>
+												</td>
+												<td>Dungeoneering</td>
+											</tr>
+											<tr>
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=26&amp;page=1">221</a></td>
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=26&amp;page=1">200,000,000</a></td>
+												<td class="playerWinLeft alignleft">
+													<div class="relative"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=26&amp;page=1">99</a></div>
+												</td>
+												<td>Divination</td>
+											</tr>
+											<tr class="oddRow">
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=27&amp;page=1">203</a></td>
+												<td class="alignleft"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=27&amp;page=1">200,000,000</a></td>
+												<td class="playerWinLeft alignleft">
+													<div class="relative"><a href="http://services.runescape.com/m=hiscore/ranking?category_type=0&amp;table=27&amp;page=1">120</a></div>
+												</td>
+												<td>Invention</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</section>
+					</section>
+				</div>
+			</div>
+		</main>
+
 		<footer class="footer">
 			<div class="footer__inner">
 				<div class="footer__paragraph">
@@ -104,7 +370,8 @@
 				</div>
 			</div>
 		</footer>
-    
-  </div>
+
+	</div>
 </body>
+
 </html>

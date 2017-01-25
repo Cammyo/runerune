@@ -21,7 +21,7 @@ require('colors');
             secure: false
         }
     }),
-    PORT = 1337,
+    PORT = 80,
     Routes = require('./routes'),
     app = express();
 
